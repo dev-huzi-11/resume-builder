@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Resume Builder</title>
+  </head>
+  <body>
+    <div class="resume-container">
+      <h1 id="title">Resume Builder</h1>
+      <form class="resume-form">
+        <!---------- Personal Information  ------------>
+        <fieldset>
+          <legend>Personal Information</legend>
+          
+          <label for="user-name" id="user-label">UserName: </label>
+          <input
+          type="text"
+          placeholder="Enter your username"
+          id="UserName"
+          required
+          />
+          <label for="name" id="name-label">Name: </label>
+          <input type="text" placeholder="Enter your name" id="name" required />
+          <label for="address" id="address-;abel">Address:</label>
+          <input
+          type="text"
+          placeholder="Enter your address"
+          id="address"
+          required
+          />
+          <label for="profile-picture" class="profile-picture-label">
+              choose picture: 
+          </label>
+          <input type="file" id="profile-picture" />
+
+          <label for="email" id="email-label">Email: </label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            id="email"
+            required
+          />
+          <label for="phone" id="phone-label">Phone: </label>
+          <input
+            type="phone"
+            placeholder="Enter your phone number"
+            id="phone"
+            required
+          />
+        </fieldset>
+
+        <!---------------- About ----------------->
+        <fieldset>
+          <legend>About</legend>
+          <label>About:</label>
+          <textarea id="about" rows="4" placeholder="Briefly explain about yourself"></textarea>
+        </fieldset>
+        <!-------------- Education --------------->
+        <fieldset>
+          <legend>Education</legend>
+          <h3><u>Bachlors</u></h3>
+          <label for="education" id="education-label">University: </label>
+          <input
+            type="text"
+            id="university"
+            placeholder="Enter your university"
+            required
+          />
+
+          <label for="year">Year: </label>
+          <select id="uni-selected-year">
+            <option id="edu-year">2024</option>
+            <option id="edu-year">2023</option>
+            <option id="edu-year">2022</option>
+            <option id="edu-year">2021</option>
+            <option id="edu-year">2020</option>
+            <option id="edu-year">2019</option>
+            <option id="edu-year">2018</option>
+            <option id="edu-year">2017</option>
+            <option id="edu-year">2016</option>
+            <option id="edu-year">2015</option>
+          </select>
+          <label id="grade-lebel">CGPA: </label>
+          <input type="text" placeholder="CGPA" id="cgpa" required />
+          <h3><u>Intermediate</u></h3>
+          <label for="education" id="education-label">College: </label>
+          <input
+            type="text"
+            id="college"
+            placeholder="Enter your college"
+            required
+          />
+          <label for="year">Year: </label>
+          <select id="college-selected-year">
+            <option id="edu-year">2024</option>
+            <option id="edu-year">2023</option>
+            <option id="edu-year">2022</option>
+            <option id="edu-year">2021</option>
+            <option id="edu-year">2020</option>
+            <option id="edu-year">2019</option>
+            <option id="edu-year">2018</option>
+            <option id="edu-year">2017</option>
+            <option id="edu-year">2016</option>
+            <option id="edu-year">2015</option>
+          </select>
+          <label id="grade-lebel">Grade: </label>
+          <input type="text" placeholder="grade" required />
+        </fieldset>
+        <!------------ Skills --------------->
+        <fieldset id="skills-section">
+          <legend>Skills</legend>
+          <div id="skills-container">
+            <label id="skills-label">Skills: </label>
+            <input type="text" class="skills" placeholder="Enter your skills" />
+          </div>
+          <button class="skills-btn" type="button">Add Skills</button>
+        </fieldset> 
+        <!------------ Tools --------------->
+        <fieldset id="tools-section">
+          <legend>Tools</legend>
+          <div id="tools-container">
+            <label id="tools-label">Tools: </label>
+            <input type="text" class="tools" placeholder="Enter tool which you use" />
+          </div>
+          <button class="tools-btn" type="button">Add tools</button>
+        </fieldset> 
+
+        <!--------------- Experience ---------------->
+        <fieldset>
+          <legend>Experience</legend>
+          <label id="experience-label">Experience: </label>
+          <textarea id="experience" rows="4" placeholder="add your experience"></textarea>
+        </fieldset>
+        <button class="generate-resume-btn" type="submit">Generate your resume</button>
+      </form>
+      <div class="output"></div>
+        <div class="shareable-link-container">
+            <button id="shareable-link">Copy Shareable Link</button>
+            <button id="download-pdf">Download PDF</button>
+            <button id="edit-button">Edit</button>
+            <button id="save-button" class="none">Save</button>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  </body>
+</html>
